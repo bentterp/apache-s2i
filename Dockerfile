@@ -4,7 +4,7 @@ USER 0
 RUN yum -y install httpd
 RUN yum -y clean all
 RUN sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
-RUN chown -R a+rwx /run/httpd /var/log/httpd
+RUN chmod -R a+rwx /run/httpd /var/log/httpd
 EXPOSE 8080
 
 USER nobody
