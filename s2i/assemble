@@ -13,11 +13,11 @@ function finish {
 trap finish EXIT
 
 echo "---> Preparing source..."
-cp -Rf /tmp/src/* /var/httpd/html/
+cp -Rf /tmp/src/* /var/www/html/
 
 
 # Fix source directory permissions
-fix-permissions /var/httpd/html /var/run/httpd /var/log/httpd
+fix-permissions /var/www/html /var/run/httpd /var/log/httpd
 
 echo
 echo "===> Build completed at $(date)"
