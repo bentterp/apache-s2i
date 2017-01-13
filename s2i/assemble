@@ -17,7 +17,7 @@ cp -Rf /tmp/src/* /var/httpd/html/
 
 
 # Fix source directory permissions
-fix-permissions /var/httpd/html
+fix-permissions /var/httpd/html /run/httpd /var/log/httpd
 
 echo
 echo "===> Build completed at $(date)"
