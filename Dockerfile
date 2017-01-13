@@ -1,6 +1,11 @@
 FROM openshift/base-centos7
 MAINTAINER bent.terp@basefarm.com
 
+LABEL io.k8s.description="Platform for serving static HTML files" \
+      io.k8s.display-name="Apache HTTPD 2.4" \
+      io.openshift.expose-services="8080:http" \
+      io.openshift.tags="builder,html,httpd"
+      
 USER 0
 RUN yum -y install httpd
 RUN yum -y clean all
