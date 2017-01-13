@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo 'This is an S2I image and should not be run outside OpenShift'
