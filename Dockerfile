@@ -9,6 +9,6 @@ RUN chmod -R a+rwx /run/httpd /var/log/httpd
 EXPOSE 8080
 
 USER nobody
-CMD /usr/sbin/httpd -DFOREGROUND
+CMD ${STI_SCRIPTS}/usage
 
 
