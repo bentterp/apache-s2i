@@ -8,7 +8,7 @@ RUN sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
 RUN chmod -R a+rwx /run/httpd /var/log/httpd
 EXPOSE 8080
 COPY ./s2i/ ${STI_SCRIPTS_PATH}
-USER nobody
+USER 10001
 CMD ${STI_SCRIPTS}/usage
 
 
