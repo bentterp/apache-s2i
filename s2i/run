@@ -2,5 +2,5 @@
 
 set -e
 
-cd /run/httpd
+cd /var/run/httpd
 exec /sbin/httpd -DFOREGROUND
