@@ -1,4 +1,5 @@
-FROM centos:7
+FROM openshift/base-centos7
+MAINTAINER bent.terp@basefarm.com
 
 USER 0
 RUN yum -y install httpd
