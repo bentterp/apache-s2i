@@ -1,3 +1,9 @@
 #!/bin/bash
 
-echo 'This is an S2I image and should not be run outside OpenShift'
+cat <<EOF
+This is a S2I Apache CentOS base image:
+To use it, install S2I: https://github.com/openshift/source-to-image
+Sample invocation:
+$ s2i build https://github.com/bentterp/apache-s2i.git caddy-test-app
+You can then run the resulting image via:
+$ docker run -p 8080:80 -p 8443:443 caddy-test-app
